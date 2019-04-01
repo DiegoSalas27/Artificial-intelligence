@@ -1,5 +1,5 @@
-var cols = 25;
-var rows = 25;
+var cols = 50;
+var rows = 50;
 var grid = new Array(cols);
 var openList = [];
 var closedList = [];
@@ -29,9 +29,17 @@ function Spot(i, j){
   this.h = 0;
   this.neighbors = [];
   this.previous = undefined;
+  this.wall = false;
+
+  if(random(1) < 0.3) {
+    this.wall = true;
+  }
 
   this.show = function(col){
     fill(col);
+    if(this.wall){
+      fill(0)
+    }
     noStroke();
     rect(this.i*w, this.j*h, w-1, h-1);
   }
@@ -51,6 +59,18 @@ function Spot(i, j){
     }
     if(j > 0){
       this.neighbors.push(grid[i][j - 1]);
+    }
+    if(i > 0 && j > 0){
+      this.neighbors.push(grid[i - 1][j - 1]);
+    }
+    if(i < cols - 1 && j > 0){
+      this.neighbors.push(grid[i + 1][j - 1]);
+    }
+    if(i > 0 && j < rows - 1){
+      this.neighbors.push(grid[i - 1][j + 1]);
+    }
+    if(i < cols - 1 && j < rows - 1){
+      this.neighbors.push(grid[i + 1][j + 1]);
     }
   }
 }
@@ -79,7 +99,9 @@ function setup() {
   }
 
   start = grid[0][0];
-  end = grid[cols-1][3];  
+  end = grid[cols-1][rows-1];  
+  start.wall = false;
+  end.wall = false;
 
   openList.push(start);
 }
@@ -109,26 +131,33 @@ function draw() {
     for(var i = 0; i < neighbors.length; i++){
       var neighbor = neighbors[i];
 
-      if(!closedList.includes(neighbor)){
+      if(!closedList.includes(neighbor) && !neighbor.wall){
         var tempG = current.g + 1;
 
+        var newPath = false;
         if(openList.includes(neighbor)){
           if(tempG < neighbor.g){
             neighbor.g = tempG;
+            newPath = true;
           }
         } else {
           neighbor.g = tempG
+          newPath = true;
           openList.push(neighbor);
         }
 
-        neighbor.h = heuristic(neighbor, end);
-        neighbor.f = neighbor.g + neighbor.h;
-        neighbor.previous = current;
+        if(newPath) {
+          neighbor.h = heuristic(neighbor, end);
+          neighbor.f = neighbor.g + neighbor.h;
+          neighbor.previous = current;  
+        }
       }
     }
 
   } else {
-    //no solution
+    console.log("No solution");
+    noLoop();
+    return;
   }
   background(0);
 
@@ -153,7 +182,7 @@ function draw() {
     path.push(temp.previous);
     temp = temp.previous;
   }
-
+  
   for(var i = 0; i < path.length; i++){
     path[i].show(color(0, 0, 255));
   }
