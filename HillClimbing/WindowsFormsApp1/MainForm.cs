@@ -333,5 +333,81 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        int col = 0;
+        private void continuarBtn_Click(object sender, EventArgs e)
+        {
+           SolveHillClimbing2(); 
+        }
+
+        void SolveHillClimbing2() {
+
+            for (int i = 0; i < 8; i++)
+            {
+                HC_board[i] = new int[8];
+            }
+
+            // randomly place queens
+
+            placeQueens();
+            Console.WriteLine("Columna #: " + (col + 1));
+            Console.WriteLine("Original board:");
+            printBoard();
+            Console.WriteLine("# pairs of queens attacking each other: "
+                + heuristic() + "\n");
+
+            // score to be compared against
+            int localMin = heuristic();
+            Boolean best = false;
+            // array to store best queen position by row (array index is column)
+            int[] bestQueenPositions = new int[8];
+
+
+            Console.WriteLine("Iterating through COLUMN " + col + 1 + ":");
+            best = false;
+            // iterate through each row
+            for (int i = 0; i < HC_board.Length; i++)
+            {
+
+                // skip score calculated by original board
+                if (i != queenPositions[col])
+                {
+
+                    //move queen
+                    moveQueen(i, col);
+                    printBoard();
+                    Console.WriteLine();
+                    // calculate score, if best seen the store queen position
+                    if (heuristic() < localMin)
+                    {
+                        best = true;
+                        localMin = heuristic();
+                        bestQueenPositions[col] = i;
+                    }
+                    // reset to original queen position
+                    resetQueen(i, col);
+                }
+            }
+
+            // change 2 back to 1
+            resetBoard(col);
+            if (best)
+            {
+
+                // if a best score was found, place queen in this position
+                placeBestQueen(col, bestQueenPositions[col]);
+                Console.WriteLine("Best board found this iteration: ");
+                printBoard();
+                Console.WriteLine("# pairs of queen attacking each other: "
+                    + heuristic() + "\n");
+            }
+            else
+            {
+                Console.WriteLine("No better board found.");
+                printBoard();
+                Console.WriteLine("# pairs of queen attacking each other: "
+                    + heuristic() + "\n");
+            }
+        }
     }
 }
