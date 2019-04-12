@@ -8,12 +8,13 @@ c:\users\dominic\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsF
 c:\users\dominic\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 c:\users\dominic\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\DOMINIC\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
-C:\Users\Proyecto\Documents\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-C:\Users\Proyecto\Documents\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
-C:\Users\Proyecto\Documents\Artificial-intelligence\HillClimbing\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
-C:\Users\Proyecto\Documents\Artificial-intelligence\HillClimbing\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-C:\Users\Proyecto\Documents\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
-C:\Users\Proyecto\Documents\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Board.resources
-C:\Users\Proyecto\Documents\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
-C:\Users\Proyecto\Documents\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-C:\Users\Proyecto\Documents\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Board.resources
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb

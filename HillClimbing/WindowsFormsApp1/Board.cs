@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
     {
         private Image queen;
         private int[] genes;
+        public int taken = 0;
         public int[] Genes
         {
             set
@@ -23,6 +24,7 @@ namespace WindowsFormsApp1
                 Refresh();
             }
         }
+
         public Board()
         {
             InitializeComponent();
@@ -41,8 +43,17 @@ namespace WindowsFormsApp1
             {
                 for (int i = 0; i < 8; i++)
                 {
-                    if (queen != null)
+                    if (queen != null) {
+                        Brush b;
+                        b = Brushes.Yellow;
+                        if (taken > 0) {
+                            g.FillRectangle(b, new Rectangle(i * size, (7 - genes[i]) * size, size, size));
+                            taken--;
+                        }
+                       
                         g.DrawImage(queen, new Rectangle(i * size, (7 - genes[i]) * size, size, size));
+                    }
+                        
                 }
             }
         }
