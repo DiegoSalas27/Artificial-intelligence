@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+           // g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             int size = this.Height / 8;
             if (genes != null)
             {
@@ -48,9 +48,10 @@ namespace WindowsFormsApp1
                         b = Brushes.Yellow;
                         if (taken > 0) {
                             g.FillRectangle(b, new Rectangle(i * size, (7 - genes[i]) * size, size, size));
+                            g.DrawImage(queen, new Rectangle(i * size, (7 - genes[i]) * size, size, size));
                             taken--;
+                            continue;
                         }
-                       
                         g.DrawImage(queen, new Rectangle(i * size, (7 - genes[i]) * size, size, size));
                     }
                         

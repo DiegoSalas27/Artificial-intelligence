@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.nudLatencia = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblAtaque = new System.Windows.Forms.Label();
+            this.lblNoMejor = new System.Windows.Forms.Label();
+            this.lblIterando = new System.Windows.Forms.Label();
+            this.lblPrueba = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.bnStart = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.board1 = new WindowsFormsApp1.Board();
-            this.lblPrueba = new System.Windows.Forms.Label();
-            this.lblIterando = new System.Windows.Forms.Label();
-            this.lblNoMejor = new System.Windows.Forms.Label();
-            this.lblAtaque = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nudLatencia = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLatencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -78,6 +78,81 @@
             this.tabPage1.Size = new System.Drawing.Size(464, 498);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "HillClimbing";
+            // 
+            // nudLatencia
+            // 
+            this.nudLatencia.Location = new System.Drawing.Point(183, 41);
+            this.nudLatencia.Margin = new System.Windows.Forms.Padding(4);
+            this.nudLatencia.Name = "nudLatencia";
+            this.nudLatencia.Size = new System.Drawing.Size(92, 22);
+            this.nudLatencia.TabIndex = 10;
+            this.nudLatencia.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(7, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Latencia:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(7, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(141, 17);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Número de reseteos:";
+            this.label6.Visible = false;
+            // 
+            // lblAtaque
+            // 
+            this.lblAtaque.AutoSize = true;
+            this.lblAtaque.ForeColor = System.Drawing.Color.White;
+            this.lblAtaque.Location = new System.Drawing.Point(7, 105);
+            this.lblAtaque.Name = "lblAtaque";
+            this.lblAtaque.Size = new System.Drawing.Size(195, 17);
+            this.lblAtaque.TabIndex = 7;
+            this.lblAtaque.Text = "Par de reinas que se atacan: ";
+            // 
+            // lblNoMejor
+            // 
+            this.lblNoMejor.AutoSize = true;
+            this.lblNoMejor.ForeColor = System.Drawing.Color.White;
+            this.lblNoMejor.Location = new System.Drawing.Point(7, 168);
+            this.lblNoMejor.Name = "lblNoMejor";
+            this.lblNoMejor.Size = new System.Drawing.Size(236, 17);
+            this.lblNoMejor.TabIndex = 6;
+            this.lblNoMejor.Text = "No se ha encontrado mejor solución";
+            this.lblNoMejor.Visible = false;
+            // 
+            // lblIterando
+            // 
+            this.lblIterando.AutoSize = true;
+            this.lblIterando.ForeColor = System.Drawing.Color.White;
+            this.lblIterando.Location = new System.Drawing.Point(7, 136);
+            this.lblIterando.Name = "lblIterando";
+            this.lblIterando.Size = new System.Drawing.Size(121, 17);
+            this.lblIterando.TabIndex = 5;
+            this.lblIterando.Text = "Iterando columna:";
+            // 
+            // lblPrueba
+            // 
+            this.lblPrueba.AutoSize = true;
+            this.lblPrueba.ForeColor = System.Drawing.Color.White;
+            this.lblPrueba.Location = new System.Drawing.Point(7, 75);
+            this.lblPrueba.Name = "lblPrueba";
+            this.lblPrueba.Size = new System.Drawing.Size(74, 17);
+            this.lblPrueba.TabIndex = 4;
+            this.lblPrueba.Text = "Prueba #: ";
             // 
             // numericUpDown1
             // 
@@ -135,83 +210,6 @@
             this.board1.Name = "board1";
             this.board1.Size = new System.Drawing.Size(547, 502);
             this.board1.TabIndex = 4;
-            this.board1.Load += new System.EventHandler(this.board1_Load);
-            // 
-            // lblPrueba
-            // 
-            this.lblPrueba.AutoSize = true;
-            this.lblPrueba.ForeColor = System.Drawing.Color.White;
-            this.lblPrueba.Location = new System.Drawing.Point(7, 75);
-            this.lblPrueba.Name = "lblPrueba";
-            this.lblPrueba.Size = new System.Drawing.Size(74, 17);
-            this.lblPrueba.TabIndex = 4;
-            this.lblPrueba.Text = "Prueba #: ";
-            // 
-            // lblIterando
-            // 
-            this.lblIterando.AutoSize = true;
-            this.lblIterando.ForeColor = System.Drawing.Color.White;
-            this.lblIterando.Location = new System.Drawing.Point(7, 136);
-            this.lblIterando.Name = "lblIterando";
-            this.lblIterando.Size = new System.Drawing.Size(121, 17);
-            this.lblIterando.TabIndex = 5;
-            this.lblIterando.Text = "Iterando columna:";
-            // 
-            // lblNoMejor
-            // 
-            this.lblNoMejor.AutoSize = true;
-            this.lblNoMejor.ForeColor = System.Drawing.Color.White;
-            this.lblNoMejor.Location = new System.Drawing.Point(7, 168);
-            this.lblNoMejor.Name = "lblNoMejor";
-            this.lblNoMejor.Size = new System.Drawing.Size(236, 17);
-            this.lblNoMejor.TabIndex = 6;
-            this.lblNoMejor.Text = "No se ha encontrado mejor solución";
-            this.lblNoMejor.Visible = false;
-            // 
-            // lblAtaque
-            // 
-            this.lblAtaque.AutoSize = true;
-            this.lblAtaque.ForeColor = System.Drawing.Color.White;
-            this.lblAtaque.Location = new System.Drawing.Point(7, 105);
-            this.lblAtaque.Name = "lblAtaque";
-            this.lblAtaque.Size = new System.Drawing.Size(195, 17);
-            this.lblAtaque.TabIndex = 7;
-            this.lblAtaque.Text = "Par de reinas que se atacan: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(7, 201);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 17);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Número de reseteos:";
-            this.label6.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(7, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Latencia:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // nudLatencia
-            // 
-            this.nudLatencia.Location = new System.Drawing.Point(183, 41);
-            this.nudLatencia.Margin = new System.Windows.Forms.Padding(4);
-            this.nudLatencia.Name = "nudLatencia";
-            this.nudLatencia.Size = new System.Drawing.Size(92, 22);
-            this.nudLatencia.TabIndex = 10;
-            this.nudLatencia.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // MainForm
             // 
@@ -229,12 +227,11 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Problema de las 8 reinas resuelto con Hillclimbing";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLatencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -17,11 +17,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void resetLabelValues(int climbcount = 0) {
             printBoard();
             string message = "¡Se terminaron de iterar todas las columnas\npuedes empezar de nuevo!";
@@ -40,6 +35,7 @@ namespace WindowsFormsApp1
             lblIterando.Visible = false;
             lblNoMejor.Visible = false;
             lblPrueba.Visible = false;
+            button2.Visible = true;
             Refresh();
         }
 
@@ -64,7 +60,7 @@ namespace WindowsFormsApp1
         int[][] HC_board = new int[8][];
         private int[] queenPositions = new int[8];
         void SolveHillClimbing(int count, int latencia) {
-
+            button2.Visible = false;
             mostrarLabelValues();
 
             for (int i = 0; i < 8; i++) {
@@ -136,8 +132,8 @@ namespace WindowsFormsApp1
                         Refresh();
                         // Si se ha encontrado un mejor score poner las reinas en esta posición
                         placeBestQueen(j, bestQueenPositions[j]);
-                        Console.WriteLine("Mejor tablero en esta iteración: ");
-                        printBoard();
+                        //Console.WriteLine("Mejor tablero en esta iteración: ");
+                        //printBoard();
                         Console.WriteLine("# Par de reinas que se atacan: "
                             + heuristic() + "\n");
                         lblAtaque.Text = "Par de reinas que se atacan: " + heuristic().ToString();
@@ -148,7 +144,7 @@ namespace WindowsFormsApp1
                         Console.WriteLine("No se ha encontrado mejor solución.");
                         lblNoMejor.Visible = true;
                         Refresh();
-                        printBoard();
+                        //printBoard();
                         Console.WriteLine("# Par de reinas que se atacan: "
                             + heuristic() + "\n");
                         lblAtaque.Text = "Par de reinas que se atacan: " + heuristic().ToString();
@@ -174,13 +170,14 @@ namespace WindowsFormsApp1
         }
 
         int columna = 0;
-        void SolveHillClimbing2(int count, int latencia) {
-
+        void SolveHillClimbing2(int latencia) {
+            bnStart.Visible = false;
             mostrarLabelValues();
 
             if (columna == 8) {
                 resetLabelValues();
                 columna = 0;
+                bnStart.Visible = true;
                 return;
             }
 
@@ -324,7 +321,6 @@ namespace WindowsFormsApp1
                         sol[p] = 7 - q;
                     }
                 }
-
                 board1.Genes = sol;
                 board1.taken = taken;
             }
@@ -491,24 +487,9 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void board1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            SolveHillClimbing2((int)numericUpDown1.Value, (int)nudLatencia.Value);
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            SolveHillClimbing2((int)nudLatencia.Value);
         }
     }
 }

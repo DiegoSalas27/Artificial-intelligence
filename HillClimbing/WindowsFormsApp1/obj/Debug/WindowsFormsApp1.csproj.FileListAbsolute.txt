@@ -18,3 +18,13 @@ C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artifici
 C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\DOMINIC\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\Artificial-intelligence\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Board.resources
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Users\DOMINIC\Desktop\UPC VII\Inteligencia Artificial\Artificial-intelligence\HillClimbing\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
