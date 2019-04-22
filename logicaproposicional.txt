@@ -1,0 +1,39 @@
+def bcondicional(p, q):
+  z = (p and q) or (not p and not q)
+  return z
+
+def conjuction(p, q):
+  z = (p and q)
+  return z
+
+def doubleNegation(p, q):
+  z = (not p)
+  return z
+
+def disyuncion(p, q):
+  return (p or q)
+
+if __name__ == '__main__':
+  datos = []
+  p = [False, True]
+  q = [False, True]
+  for pval in p:
+    for qval in q:
+      lista = []
+      lista.append(pval)
+      lista.append(qval)
+      datos.append(lista)
+  
+  i = 0
+  print("i", " ", "p", " ", "    q", " ", "    r1", " ", "   r2", " ", "   r3", " ", "    r4", "   todos")
+  for(p, q) in datos:
+    r1 = conjuction(p, q)
+    r2 = bcondicional(p, q)
+    r3 = doubleNegation(p, q)
+    r4 = disyuncion(p, q)
+
+    print(i, " ", p, " ", q, " ", r1, " ", r2, " ", r3," ", r4,
+    conjuction(r1, conjuction(r2, conjuction(r3, r4))))
+    i += 1
+    
+
