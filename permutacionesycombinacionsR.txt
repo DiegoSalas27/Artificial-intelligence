@@ -1,0 +1,25 @@
+library(gtools)
+
+p1 = permutations(6, 6)
+print(p1)
+print(head(p1))
+print(tail(p1))
+View(p1)
+
+n = 12
+r = 3
+marcas = c(letters[1:n])
+result = permutations(n, r, marcas)
+View(result)
+
+
+R = combinations(5, 3)
+View(R)
+
+m = 5
+n = 4
+botellas = letters[1:m]
+R= combinations(m,n,botellas,repeats.allowed = TRUE)
+
+
+
